@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+$colors: (
+   background:#afffeb,
+   previewBackground: white, 
+   shadow:#a8bdb8
+  );
+  
+@function colors($color-name) {
+    @return map-get($colors, $color-name)
+  }
+
+.shadow {
+     border: 2px solid;
+     -webkit-box-shadow: 10px 33px 48px 2px rgba(0,0,0,0.73);
+     -moz-box-shadow: 10px 33px 48px 2px rgba(0,0,0,0.73);
+     box-shadow: 10px 33px 48px 2px rgba(0,0,0,0.73);
+     padding: 10px;
+}
+
+body {
+    background-color: colors(background);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#root {
+    height: 100vh;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+textarea {
+    @extend .shadow;
+    overflow: auto;
+    
+    // box-shadow: 5px 10px colors(shadow);
+}
+
+#preview {
+    @extend .shadow;
+    height: 100%;
+    background-color: colors(previewBackground)
+
+}
