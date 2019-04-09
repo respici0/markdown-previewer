@@ -30,9 +30,15 @@ body {
     text-align: center;
 }
 
+.content {
+  display: flex;
+  margin-top: 25px;
+}
+
 textarea {
     @extend .shadow;
     text-align: left;
+    margin-bottom:  50px;
 }
 
 #preview {
@@ -61,3 +67,15 @@ textarea {
       }
     }
   }
+
+  @media screen and (max-width: 650px) {
+    #root {
+      max-width: 100%;
+      transform: scale(0.9)
+    }
+    html {
+      width: 100vh;
+    }
+   }
+
+ 

@@ -24,42 +24,41 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1>Learn Markdown</h1>
-        </header>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col">
-              <h3>Edit stuff here:</h3>
-              <textarea type="text" id="editor" rows="40" cols="100" onChange={this.onChange} value={this.state.toBeCompiled} >
-              </textarea>
-            </div>
-            <div className="col">
-              <h3>Preview it here:</h3>
-              <div id="preview" dangerouslySetInnerHTML={this.createMarkup()}>
+      <React.Fragment>
+        <div>
+          <div className="content">
+            <div className="row">
+              <div className="col">
+                <h3>Edit Markdown:</h3>
+                <textarea type="text" id="editor" rows="40" cols="100" onChange={this.onChange} value={this.state.toBeCompiled} >
+                </textarea>
+              </div>
+              <div className="col">
+                <h3>Preview Markdown:</h3>
+                <div id="preview" dangerouslySetInnerHTML={this.createMarkup()}>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer">
-          <p>
-            Created by{" "}
-            <a href="https://robertpaulrespicio.com/" target="_block">
-              Respici0
+          <div className="footer">
+            <p>
+              Created by{" "}
+              <a href="https://robertpaulrespicio.com/" target="_block">
+                Respici0
               </a>
-          </p>
+            </p>
+          </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
 
 const markupText =
 
-  `# Markdown Previewer Common Examples
+  `# Markdown Common Examples (Learn it!)
    ---
-In Github, README, you use markdown to decorate it!  Here are some are the most common markdown you will see being used when reading a README on Github.
+In Github, README, you use markdown to decorate it! Here are some are the most common markdown you will see being used when reading a README on Github.
  
 ## Header Sizes
 ---
