@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toBeCompiled: placeholder
+      toBeCompiled: markupText
     }
   }
 
@@ -47,52 +47,81 @@ class App extends Component {
   }
 }
 
-const placeholder =
-  `# Welcome to my React Markdown Previewer!
+const markupText =
 
-## This is a sub-heading...
-### And here's some other cool stuff:
-  
-Heres some code, \`<div></div>\`, between 2 backticks.
+  `# Markdown Previewer Common Examples
+   ---
+In Github, README, you use markdown to decorate it!  Here are some are the most common markdown you will see being used when reading a README on Github.
+ 
+## Header Sizes
+---
+# h1
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+ 
+## Lists
+---
+
+1. Here is a list using 1's, numbers don't matter.
+1. Using 1's are the most common to use
+1. You can list as many as you want.
+
+Here are other types:
+- These are bulleted.
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+     - You can indent as well!
+
+## You can also inline code & do code blocks
+--- 
+Just use 2 back ticks, like this \`<header></header>\`.
+
+
+you can do a code block by doing three backticks back to back:
 
 \`\`\`
-// this is multi-line code:
+let phrase = "Heck yah! It is!";
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
+function codeIsFun(string) {
+  return string;
 }
+
+// here is a comment
+codeIsFun(phrase);
 \`\`\`
   
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
+## Emphasis
+---
 
-There's also [links](https://www.freecodecamp.com), and
-> Block Quotes!
+You can make a bunch of different type of texts like these:
+You can also make text 
+1. **bold**
+2. _italic_.
+3. **_can be bold & italics_**
+4. ~~crossed out~~.
 
-And if you want to get really crazy, even tables:
+## Couple of other things you can do with markdown:
+---
 
-Wild Header | Crazy Header | Another Header?
------------- | ------------- | ------------- 
-Your content can | be here, and it | can be here....
-And here. | Okay. | I think we get it.
-
-- And of course there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
-        - That look like this.
+You can add an image:
+![It's funny cause it's true.](https://www.probytes.net/wp-content/uploads/2018/01/6-1.jpg)
 
 
-1. And there are numbererd lists too.
-1. Use just 1s if you want! 
-1. But the list goes on...
-- Even if you use dashes or asterisks.
-* And last but not least, let's not forget embedded images:
+You can add a youtube picture with the link to it:
+<a href="https://www.youtube.com/watch?v=eJojC3lSkwg
+" target="_blank"><img src="https://scotch-res.cloudinary.com/image/upload/w_1000,q_auto:good,f_auto/media/https://scotch.io/wp-content/uploads/2015/02/guide-to-markdown-web-writing.png" 
+alt="IMAGE ALT TEXT HERE" width="360" height="180" border="10" /></a>
 
-![React Logo w/ Text](https://goo.gl/Umyytc)
+---
+
+You can link URLs as well, here is an example, as well as a link to [adam-p's markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#headers).
+
 `
 
 
