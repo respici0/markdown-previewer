@@ -2,8 +2,9 @@
 
 $colors: (
    background:#afffeb,
-   previewBackground: white, 
-   shadow:#a8bdb8
+   previewBackground: whitesmoke, 
+   codeBackground: white,
+   shadowColor:#464141
   );
   
 @function colors($color-name) {
@@ -12,10 +13,11 @@ $colors: (
 
 .shadow {
      border: 2px solid;
-     -webkit-box-shadow: 10px 33px 48px 2px rgba(0,0,0,0.73);
-     -moz-box-shadow: 10px 33px 48px 2px rgba(0,0,0,0.73);
-     box-shadow: 10px 33px 48px 2px rgba(0,0,0,0.73);
+     -webkit-box-shadow: 10px 33px 48px 2px colors(shadowColor);
+     -moz-box-shadow: 10px 33px 48px 2px colors(shadowColor);
+     box-shadow: 10px 33px 48px 2px colors(shadowColor);
      padding: 10px;
+     overflow: auto;
 }
 
 body {
@@ -28,20 +30,17 @@ body {
     text-align: center;
 }
 
-header {
-    text-align: center;
-}
-
 textarea {
     @extend .shadow;
-    overflow: auto;
-    
-    // box-shadow: 5px 10px colors(shadow);
+    text-align: left;
 }
 
 #preview {
     @extend .shadow;
-    height: 100%;
-    background-color: colors(previewBackground)
-
+    height: 74%;
+    background-color: colors(previewBackground);
+    text-align: left;
+    pre, code {
+        background-color: colors(codeBackground);
+    }
 }
