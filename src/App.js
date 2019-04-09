@@ -26,17 +26,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Markdown Previewer</h1>
+          <h1>Learn Markdown</h1>
         </header>
         <div className="container-fluid">
           <div className="row">
-            <div className="col" id="editor">
-              <h3>Editor</h3>
-              <textarea type="text" rows="40" cols="100" onChange={this.onChange} value={this.state.toBeCompiled} >
+            <div className="col">
+              <h3>Edit stuff here:</h3>
+              <textarea type="text" id="editor" rows="40" cols="100" onChange={this.onChange} value={this.state.toBeCompiled} >
               </textarea>
             </div>
             <div className="col">
-              <h3>Previewer</h3>
+              <h3>Preview it here:</h3>
               <div id="preview" dangerouslySetInnerHTML={this.createMarkup()}>
               </div>
             </div>
@@ -117,6 +117,8 @@ You can add a youtube picture with the link to it:
 <a href="https://www.youtube.com/watch?v=eJojC3lSkwg
 " target="_blank"><img src="https://scotch-res.cloudinary.com/image/upload/w_1000,q_auto:good,f_auto/media/https://scotch.io/wp-content/uploads/2015/02/guide-to-markdown-web-writing.png" 
 alt="IMAGE ALT TEXT HERE" width="360" height="180" border="10" /></a>
+
+> A block quote, most commonly used to emulate a reply text. You can also put markdown inside a block quote
 
 ---
 
